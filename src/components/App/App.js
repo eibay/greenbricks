@@ -10,6 +10,9 @@ class App extends React.Component{
     render() {
         return(
             <main className="app">
+                <div className="logo-container">
+                    <img className="logo" src="/house-logo.png" alt="House Of Joy"/>
+                </div>
                 <Row>
                     <Column size={3}> 
                         <HouseContainer />
