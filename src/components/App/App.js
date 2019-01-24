@@ -1,12 +1,13 @@
 import React from 'react';
 
+import HouseContainer from "../Houses/HouseContainer";
+
 class App extends React.Component{
     render() {
-        console.log(this.props)
         return(
-            <h1>
-                {}
-            </h1>
+            <div>
+                <HouseContainer />
+            </div>
         )
     }
 
