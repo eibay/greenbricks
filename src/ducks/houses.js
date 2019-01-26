@@ -4,12 +4,15 @@ export const types = {
     FETCH_HOUSES_REQUEST: "FETCH_HOUSES_REQUEST",
     FETCH_HOUSES_SUCCESS: "FETCH_HOUSES_SUCCESS",
     FETCH_HOUSES_FAILURE: "FETCH_HOUSES_FAILURE",
+    SELECT_HOUSE: "SELECT_HOUSE",
 }
 
 const DEFAULT_STATE = {
     results: [],
     loading: false,
     error: null,
+    isSingle: false,
+    selectedHouse: [],
 }
 
 export function reducer(state = DEFAULT_STATE, action = {}) {
@@ -23,8 +26,20 @@ export function reducer(state = DEFAULT_STATE, action = {}) {
             return {
                 ...state,
                 loading: false,
-                results: action.payload
+                results: action.payload,
             }
+        case types.FETCH_HOUSES_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                error: action.payload,
+        }
+        case types.SELECT_HOUSE:
+            return {
+                ...state,
+                selectedHouse: action.payload,
+                isSingle: true
+    }
         default:
             return state;
     }
@@ -39,7 +54,6 @@ export const actions = {
 
             return axios.get('/data.json')
             .then((response) => {
-                console.log('houses-axios:', response.data.results)
                 dispatch({
                     type: types.FETCH_HOUSES_SUCCESS,
                     payload: response.data.results
@@ -52,6 +66,14 @@ export const actions = {
                 })
             })
         }
-    }
+    },
 
+    selectHouse(house){
+        return function(dispatch) {
+            dispatch({
+                type: types.SELECT_HOUSE,
+                payload: house
+            })
+        }
+    }
 }

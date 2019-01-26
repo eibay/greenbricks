@@ -1,43 +1,33 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
-import Panel from '../Panel/Panel';
-import './House.css';
+//onClick={() => selectHouse(house.listingId)}
 
-class House extends React.Component {
-
-    render(){
-        const houses = (this.props.houses.map(house => {
-            const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(house.listPrice)
-            return (
-                <div key={house.listingId} className="card-house">
-                    <div className="card-house__inner">
-                    <img src={`${house.images[0].small}`} alt="medium" width="100%"/>
-                    <div className="card-house__body">
-                        <div className="listing-status"><p>{house.listingStatus}</p></div>
-                        <h2>{price}</h2>
-                        <div>
-                            {`${house.streetNumber} ${house.streetName}`}
-                        </div>
-                        <div>
-                            {`${house.city} ${house.state} ${house.postcode}`}
-                        </div>
-                        <br />
-                        <hr></hr>
-                        <br />
-                        <div>{`${house.bedroomsTotal} Beds  | ${house.bathroomsTotal} Baths  |  ${house.lotArea} Sq.ft `}</div>
-                        <div>{house.listingType}</div>
-                    </div>
-                    </div>
+const House = ({ house, selectHouse }) => {
+    const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(house.listPrice);
+    const status = house.listingStatus === "ComingSoon" ? "Coming Soon" : house.listingStatus;
+    return(
+        <div className="card-house__inner">
+            <Link to={`/house/${house.listingId}`}> 
+                <img src={`${house.images[0].small}`} alt="medium" width="100%"/>
+            </Link>
+            <div className="card-house__body">
+                <div className="listing-status"><p>{status}</p></div>
+                <h2>{price}</h2>
+                <div>
+                    {`${house.streetNumber} ${house.streetName}`}
                 </div>
-            )
-        }))
-
-        return(
-            <Panel title="Current Listing">
-                {houses}
-            </Panel>
-        )
-    }
+                <div>
+                    {`${house.city} ${house.state} ${house.postcode}`}
+                </div>
+                <br />
+                <hr></hr>
+                <br />
+                <div>{`${house.bedroomsTotal} Beds  | ${house.bathroomsTotal} Baths  |  ${house.lotArea} Sq.ft `}</div>
+                <div>{house.listingType}</div>
+            </div>
+        </div>
+    )
 }
 
 export default House;
