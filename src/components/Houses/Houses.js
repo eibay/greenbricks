@@ -1,7 +1,6 @@
 import React from 'react';
  
 import Panel from '../Panel/Panel';
-import './House.css';
 import House from './House'
 
 class Houses extends React.Component {
@@ -9,7 +8,7 @@ class Houses extends React.Component {
         const houseListings = (this.props.houses.map(house => {
             return (
                 <div key={house.listingId} className="card-house">
-                    <House house={house} selectHouse={this.props.selectHouse}/>
+                    <House house={house} />
                 </div>
             )
         }))

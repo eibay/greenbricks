@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-//onClick={() => selectHouse(house.listingId)}
+import './House.css';
 
-const House = ({ house, selectHouse }) => {
+const House = ({house}) => {
     const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(house.listPrice);
     const status = house.listingStatus === "ComingSoon" ? "Coming Soon" : house.listingStatus;
     return(

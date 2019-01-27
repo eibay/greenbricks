@@ -11,12 +11,11 @@ class HousesBin extends React.Component {
     }
     
     render(){
-        const { houses, isSingle } = this.props
+        const { houses } = this.props
         return(
             <div>
                 <Houses 
                     houses={houses.results}
-                    isSingle={isSingle} 
                 /> 
             </div>
         )
@@ -25,7 +24,6 @@ class HousesBin extends React.Component {
 
 const mapStateToProps = (state) => ({
     houses: state.houses,
-    isSingle: state.isSingle
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Link } from '@reach/router';
 
 import HousesBin from "../Houses/HousesBin";
-import DetailHouse from "../Houses/DetailHouse";
+import DetailHouseBin from "../Houses/DetailHouseBin";
 
 import { Row, Column } from '../Grid/Grid';
 import '../Grid/Grid.css';
@@ -30,7 +30,7 @@ class App extends React.Component{
                     <Column size={3}>
                         <Router>
                             <HousesBin path="/" />
-                            <DetailHouse path="/house/:listingId" />
+                            <DetailHouseBin path="/house/:listingId" />
                         </Router> 
                     </Column>
                 </Row>
