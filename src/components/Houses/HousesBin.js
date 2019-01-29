@@ -22,9 +22,7 @@ class HousesBin extends React.Component {
                 return match.test(criteria);
             });
         }
-        filteredHouses.map(h => {
-            console.log(h.semanticUrlComponent);
-        })
+        
         return(
             <div> 
                 {loading ? <h1>Loading....</h1> :
