@@ -1,0 +1,12 @@
+input.search-input {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+input::placeholder { 
+    color: rgba(106, 151, 125, 0.3); 
+    font-size: 1em; 
+    font-style: italic; 
+}

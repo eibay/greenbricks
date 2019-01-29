@@ -6,15 +6,17 @@ export const types = {
     FETCH_HOUSES_FAILURE: "FETCH_HOUSES_FAILURE",
     SELECT_HOUSE: "SELECT_HOUSE",
     TOGGLE_IS_DETAIL: "TOGGLE_IS_DETAIL",
+    SEARCH_HOUSE: 'SEARCH_HOUSE'
     
 }
 
 const DEFAULT_STATE = {
     results: [],
-    loading: false,
+    loading: true,
     error: null,
     isDetail: false,
     selectedHouse: [],
+    searchField: ''
 }
 
 export function reducer(state = DEFAULT_STATE, action = {}) {
@@ -25,6 +27,7 @@ export function reducer(state = DEFAULT_STATE, action = {}) {
                 loading: true,
             }
         case types.FETCH_HOUSES_SUCCESS:
+
             return {
                 ...state,
                 loading: false,
@@ -46,6 +49,11 @@ export function reducer(state = DEFAULT_STATE, action = {}) {
             return {
                 ...state,
                 isDetail: true,
+            }
+        case types.SEARCH_HOUSE:
+            return {
+                ...state,
+                searchField: action.payload
             }
         default:
             return state;
@@ -88,6 +96,15 @@ export const actions = {
         return function(dispatch) {
             dispatch({
                 type: types.TOGGLE_IS_DETAIL
+            })
+        }
+    },
+
+    searchHouse(text) {
+        return function(dispatch) {
+            dispatch({
+                type: types.SEARCH_HOUSE,
+                payload: text,
             })
         }
     }

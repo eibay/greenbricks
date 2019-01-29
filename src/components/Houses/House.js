@@ -18,7 +18,7 @@ const House = ({house}) => {
                     {`${house.streetNumber} ${house.streetName}`}
                 </div>
                 <div>
-                    {`${house.city} ${house.state} ${house.postcode}`}
+                    {`${house.city} ${house.county} ${house.state} ${house.postcode}`}
                 </div>
                 <br />
                 <hr></hr>
