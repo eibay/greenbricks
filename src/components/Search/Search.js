@@ -8,7 +8,7 @@ class Search extends React.Component {
         return(
             <div className="search">
                 <input className="search-input"
-                    placeholder='ex. california | 3-bed | tulare | visalia'
+                    placeholder='🔍 ( ex. california | 3-bed | tulare | visalia )' 
                     onChange={onSearch}
                 />
             </div>

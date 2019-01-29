@@ -27,7 +27,7 @@ class HousesBin extends React.Component {
         })
         return(
             <div> 
-                {loading ? <h1>Loading</h1> :
+                {loading ? <h1>Loading....</h1> :
                     <div>
                         <Search onSearch={onSearchChange}/>
                         <Houses 
