@@ -1,11 +1,12 @@
 # Pricks
 
-Solution to Purplebricks frontend coding challenge which demonstrates functionalities such as the following:
+Frontend demo of my property listing called 'pricks', with capability to search and view details using reactjs and redux boilerplates utilizing 'ducks' project and component based structure. Below are the features currently being implemented. 
 
   - Search property
   - View details of property
   - Navigation
   - Redux part testing
+
 
 ### Tech
 
@@ -16,6 +17,7 @@ Pricks uses a number of open source projects to work properly:
 * [create-react-app](https://www.npmjs.com/package/create-react-app) - Boilerplate for the react structure 
 * [ducks](https://github.com/erikras/ducks-modular-redux) - Redux structure guide
 * [jest](https://jestjs.io/) - testing framework used in this app
+* [reach-router] (https://reach.tech/router) - routing the app
 
 ### Development
 
@@ -39,6 +41,7 @@ $ npm test
  - Write more tests
  - Display more details to show in detail page
  - Add animation
+ - API backend using node, graphql and apollo
 
 License
 ----
