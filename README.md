@@ -19,12 +19,11 @@ Pricks uses a number of open source projects to work properly:
 
 ### Development
 
-Pbricks requires [Node.js](https://nodejs.org/) to run.
+Pricks requires [Node.js](https://nodejs.org/) to run.
 
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd pbricks
 $ npm install
 $ npm start
 ```
