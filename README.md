@@ -11,6 +11,9 @@ Solution to Purplebricks frontend coding challenge which demonstrates functional
 Pricks uses a number of open source projects to work properly:
 
 * [ReactJS](https://reactjs.org/) - Component based javasript via create-react-app boilerplate
+* [ducks](https://github.com/erikras/ducks-modular-redux) - Redux structure guide
+* [create-react-app] (https://www.npmjs.com/package/create-react-app) - Boilerplate for the react structure
+* [jest](https://jestjs.io/) - testing framework used in this app
 
 ### Development
 
@@ -24,9 +27,17 @@ $ npm install
 $ npm start
 ```
 
+### Running Tests
+
+```sh
+$ npm test
+```
+
 ### Todos
 
- - Write MORE Tests
+ - Write more tests
+ - Display more details to show in detail page
+ - Add animation
 
 License
 ----
