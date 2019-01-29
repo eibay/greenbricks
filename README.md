@@ -1,18 +1,20 @@
-# Pbricks
+# Pricks
 
 Solution to Purplebricks frontend coding challenge which demonstrates functionalities such as the following:
 
   - Search property
   - View details of property
   - Navigation
+  - Redux part testing
 
 ### Tech
 
 Pricks uses a number of open source projects to work properly:
 
-* [ReactJS](https://reactjs.org/) - Component based javasript via create-react-app boilerplate
+* [reactjs](https://reactjs.org/) - Component based javasript via create-react-app boilerplate
+* [redux](https://redux.js.org) - Component based javasript via create-react-app boilerplate
+* [create-react-app](https://www.npmjs.com/package/create-react-app) - Boilerplate for the react structure 
 * [ducks](https://github.com/erikras/ducks-modular-redux) - Redux structure guide
-* [create-react-app] (https://www.npmjs.com/package/create-react-app) - Boilerplate for the react structure
 * [jest](https://jestjs.io/) - testing framework used in this app
 
 ### Development
