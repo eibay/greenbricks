@@ -1,6 +1,6 @@
-# Pricks
+# GreenBricks
 
-Frontend demo of my property listing called 'pricks', with capability to search and view details using reactjs and redux boilerplates utilizing 'ducks' project and component based structure. Below are the features currently being implemented. 
+Frontend demo of my property listing called 'GreenBricks', with capability to search and view details using reactjs and redux boilerplates utilizing 'ducks' project and component based structure. Below are the features currently being implemented. 
 
   - Search property
   - View details of property
